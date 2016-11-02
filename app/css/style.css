@@ -2,32 +2,21 @@
     display: grid;
 
 }
-.same-line-names {
-    grid-template-columns:
-    10px [col-start] 250px [col-end]
-    10px [col-start] 250px [col-end]
-    10px [col-start] 250px [col-end]
-    10px [col-start] 250px [col-end]
-    10px;
+.grid {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px 100px;
+
+    /*меняет поведение алгоритма с row с на column*/
+    grid-auto-flow: column;
 }
 
-/* если имена одинаковые, можно добавлять номер начиная с 1 */
-
-.same-line-names > div:nth-child(3n + 1) {
-    grid-column: col-start 1;
-}
-
-.same-line-names > div:nth-child(3n + 2) {
-    grid-column: col-start 3;
-}
-
-.same-line-names > div:nth-child(3n) {
-    grid-column: col-start 4;
-}
 /*========================
         Visualization
 ========================*/
 
-.grid > * {
-    border: 1px solid;
+.grid div {
+    margin: 5px;
+    border: 1px solid #ccc;
+    background: #CCF;
 }
