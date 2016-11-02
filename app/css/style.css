@@ -2,31 +2,28 @@
     display: grid;
 
 }
-
-.unique-line-names {
+.same-line-names {
     grid-template-columns:
-    10px [col1-start] 100px [col1-end]
-    10px [col2-start] 100px [col2-end]
-    10px [col3-start] 100px [col3-end]
-    10px [col4-start] 100px [col4-end]
+    10px [col-start] 250px [col-end]
+    10px [col-start] 250px [col-end]
+    10px [col-start] 250px [col-end]
+    10px [col-start] 250px [col-end]
     10px;
 }
-/* c помощью свойства grid-column мы обратились
-к нужным нам колонкам по уникальными именам их границ
-оказаться в колонке/строке, начинающуюся с линии*/
 
-.unique-line-names > div:nth-child(3n + 1) {
-    grid-column: col1-start;
+/* если имена одинаковые, можно добавлять номер начиная с 1 */
+
+.same-line-names > div:nth-child(3n + 1) {
+    grid-column: col-start 1;
 }
 
-.unique-line-names > div:nth-child(3n + 2) {
-    grid-column: col3-start;
+.same-line-names > div:nth-child(3n + 2) {
+    grid-column: col-start 3;
 }
 
-.unique-line-names > div:nth-child(3n) {
-    grid-column: col4-start;
+.same-line-names > div:nth-child(3n) {
+    grid-column: col-start 4;
 }
-
 /*========================
         Visualization
 ========================*/
