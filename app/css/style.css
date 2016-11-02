@@ -1,26 +1,40 @@
-@charset "UTF-8";
 .grid {
-  /* turn on chrome://flags/ Experimental Web Platform features  */
-  display: -ms-grid;
-  display: grid;
-  /*свойство для колонок*/
-  /* станет ровно той ширины, которая нужна,
-  чтобы уместить результат всех значений в свойстве  */
-  /* min-content - минимальное содержание (1 слово) */
-  /* max-content - максимальное содержание (все в 1 строку)*/
-  /* minmax(min, max) - как min-width/height и max-width/height
-  auto - min-width/height, max context в зависимости от положения*/
-  -ms-grid-columns: 200px minmax(100px, 300px) 200px;
-  grid-template-columns: 200px minmax(100px, 300px) 200px; }
+    /* turn on chrome://flags/ Experimental Web Platform features  */
+    display: grid;
+
+
+    /*свойство для колонок*/
+    /* станет ровно той ширины, которая нужна,
+    чтобы уместить результат всех значений в свойстве  */
+    /* min-content - минимальное содержание (1 слово) */
+    /* max-content - максимальное содержание (все в 1 строку)*/
+    /* minmax(min, max) - как min-width/height и max-width/height
+    auto - min-width/height, max context в зависимости от положения*/
+    /* если элементов больше, чем в свойстве они перенесутся */
+
+
+    grid-template-columns: [first nav] 150px [main] 1fr [last];
+    /* свойство для строк */
+    grid-template-rows: [first header] 50px [main] 1fr [footer] 50px [last];
+}
+
+
+
 
 /*========================
         Visualization
 ========================*/
-.grid-item1 {
-  background: palevioletred; }
-
-.grid-item2 {
-  background: lightsteelblue; }
-
-.grid-item3 {
-  background: greenyellow; }
+.grid-item1,
+.grid-item5 {
+    background: palevioletred;
+}
+.grid-item2,
+.grid-item6 {
+    background: lightsteelblue;
+}
+.grid-item3{
+    background: greenyellow;
+}
+.grid-item4 {
+    background: purple;
+}
