@@ -5,7 +5,7 @@
 
     grid-template-columns: 2fr 1fr;
     /* явные названия линий */
-    grid-template-rows: [header-top] auto [header-bottom main-top] 1fr [main-bottom];
+    grid-template-rows: [header-top] auto [header-bottom] 40px [main-top] 1fr [main-bottom];
     /* неявные названия линий */
     grid-template-areas: "banner banner"
                          "container menu";
