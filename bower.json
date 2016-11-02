@@ -1,0 +1,17 @@
+{
+  "name": "Andrei",
+  "description": "My personal web-page",
+  "main": "index.html",
+  "authors": [
+    "fidelman@protonmail.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Andrei"
+  ],
+  "homepage": "fidelman.github.io",
+  "moduleType": [],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.1.1"
+  }
+}
