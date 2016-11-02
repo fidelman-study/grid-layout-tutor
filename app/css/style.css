@@ -1,45 +1,25 @@
 .grid {
     display: grid;
-    width: 500px;
-    height: 150px;
 
-    grid-template-columns: 2fr 1fr;
-    /* явные названия линий */
-    grid-template-rows: [header-top] auto [header-bottom] 40px [main-top] 20px [main-top-2] 1fr [main-bottom];
-    /* неявные названия линий */
-    grid-template-areas: "banner banner"
-                         "container menu";
+    /* сетка должно быть либо квадратом либо прямоугольников */
+    /* пустую колонку можно назвать точкой (.) */
+    /* центровина не может быть выше боковых колонок */
+    grid-template-areas: "left topcenter right"
+                         "foot1 center foot2"
+                         "foot1    .   foot2";
 }
 
-.grid > :nth-child(1) {
-    background-color: #fcc;
-
-    /* привязка нижних границ к неявным линиям */
-    grid-column-start: banner-start;
-    grid-column-end: banner-end;
-
-    /* привязка верхних границ к явным линиям */
-    grid-row-start: header-top;
-    grid-row-end: header-bottom;
-}
-
-.grid > :nth-child(2) {
-    background-color: #cfc;
-
-    grid-row-start: main-top-2;
-    grid-row-end: main-botom;
-}
-
-.grid > :nth-child(3) {
-    background-color: #ccf;
-
-    grid-row-start: main-top;
-    grid-row-end: main-bottom;
-}
-
-
-
+header  { grid-area: topcenter; }
+nav     { grid-area: left; }
+aside   { grid-area: right; }
+main    { grid-area: center; }
+footer  { grid-area: foot1; }
+address { grid-area: foot2; }
 
 /*========================
         Visualization
 ========================*/
+
+.grid > * {
+    border: 1px solid;
+}
