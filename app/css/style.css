@@ -5,7 +5,7 @@
 
     grid-template-columns: 2fr 1fr;
     /* явные названия линий */
-    grid-template-rows: [header-top] auto [header-bottom] 40px [main-top] 1fr [main-bottom];
+    grid-template-rows: [header-top] auto [header-bottom] 40px [main-top] 20px [main-top-2] 1fr [main-bottom];
     /* неявные названия линий */
     grid-template-areas: "banner banner"
                          "container menu";
@@ -26,7 +26,7 @@
 .grid > :nth-child(2) {
     background-color: #cfc;
 
-    grid-row-start: main-top;
+    grid-row-start: main-top-2;
     grid-row-end: main-botom;
 }
 
