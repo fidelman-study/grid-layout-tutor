@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass');
 
 gulp.task('concat', function() {
-	return gulp.src(['scss/**/*.scss'])
+	return gulp.src(['scss/includes/*.scss'])
 	.pipe(concat('style.scss'))
 	.pipe(gulp.dest('scss'))
 	.pipe(notify('Concat!'));
