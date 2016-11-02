@@ -1,20 +1,9 @@
 .grid {
     display: grid;
 
-    /* сетка должно быть либо квадратом либо прямоугольников */
-    /* пустую колонку можно назвать точкой (.) */
-    /* центровина не может быть выше боковых колонок */
-    grid-template-areas: "left topcenter right"
-                         "foot1 center foot2"
-                         "foot1    .   foot2";
+    grid-template-columns:  repeat(4, 10px [col-start] 250px [col-end]) 10px;
+    grid-template-rows: 30px;
 }
-
-header  { grid-area: topcenter; }
-nav     { grid-area: left; }
-aside   { grid-area: right; }
-main    { grid-area: center; }
-footer  { grid-area: foot1; }
-address { grid-area: foot2; }
 
 /*========================
         Visualization
