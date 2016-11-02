@@ -1,7 +1,7 @@
 .grid {
+  /* turn on chrome://flags/ Experimental Web Platform features  */
   display: grid;
 
-  width: 600px;
   /*свойство для колонок*/
   grid-template-columns: 100px 1fr 100px;
 }

@@ -1,3 +1,151 @@
-html {
-    background: blue;
+.grid {
+  display: grid;
+
+  /*свойство для колонок*/
+  grid-template-columns: 100px 1fr 100px;
+}
+
+
+
+/*========================
+        Visualization
+========================*/
+.grid-item1 {
+  background: palevioletred;
+}
+.grid-item2 {
+  background: lightsteelblue;
+}
+.grid-item3 {
+  background: greenyellow;
+}
+.grid {
+  display: grid;
+
+  /*свойство для колонок*/
+  grid-template-columns: 100px 1fr 100px;
+}
+
+
+
+/*========================
+        Visualization
+========================*/
+.grid-item1 {
+  background: palevioletred;
+}
+.grid-item2 {
+  background: lightsteelblue;
+}
+.grid-item3 {
+  background: greenyellow;
+}
+.grid {
+  display: grid;
+
+  width: 600px;
+  /*свойство для колонок*/
+  grid-template-columns: 100px 1fr 100px;
+}
+
+
+
+/*========================
+        Visualization
+========================*/
+.grid-item1 {
+  background: palevioletred;
+}
+.grid-item2 {
+  background: lightsteelblue;
+}
+.grid-item3 {
+  background: greenyellow;
+}
+.grid {
+  display: grid;
+
+  /*свойство для колонок*/
+  grid-template-columns: 100px 1fr 100px;
+}
+
+
+
+/*========================
+        Visualization
+========================*/
+.grid-item1 {
+  background: palevioletred;
+}
+.grid-item2 {
+  background: lightsteelblue;
+}
+.grid-item3 {
+  background: greenyellow;
+}
+.grid {
+  /* turn on   */
+  display: grid;
+
+  /*свойство для колонок*/
+  grid-template-columns: 100px 1fr 100px;
+}
+
+
+
+/*========================
+        Visualization
+========================*/
+.grid-item1 {
+  background: palevioletred;
+}
+.grid-item2 {
+  background: lightsteelblue;
+}
+.grid-item3 {
+  background: greenyellow;
+}
+.grid {
+  /* turn on chrome://flags/   */
+  display: grid;
+
+  /*свойство для колонок*/
+  grid-template-columns: 100px 1fr 100px;
+}
+
+
+
+/*========================
+        Visualization
+========================*/
+.grid-item1 {
+  background: palevioletred;
+}
+.grid-item2 {
+  background: lightsteelblue;
+}
+.grid-item3 {
+  background: greenyellow;
+}
+.grid {
+  /* turn on chrome://flags/ Experimental Web Platform features  */
+  display: grid;
+
+  /*свойство для колонок*/
+  grid-template-columns: 100px 1fr 100px;
+}
+
+
+
+/*========================
+        Visualization
+========================*/
+.grid-item1 {
+  background: palevioletred;
+}
+.grid-item2 {
+  background: lightsteelblue;
+}
+.grid-item3 {
+  background: greenyellow;
 }
