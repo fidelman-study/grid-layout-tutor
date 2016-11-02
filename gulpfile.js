@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 	notify = require("gulp-notify"),
 	autoprefixer = require('gulp-autoprefixer'),
 	concat = require('gulp-concat'),
-	rev = require('gulp-rev-append'),
+	rev = require('gulp-rev-append-all'),
 	sass = require('gulp-sass');
 
 gulp.task('concat', function() {
