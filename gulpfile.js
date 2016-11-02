@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass');
 
 gulp.task('concat', function() {
-	return gulp.src(['scss/includes/*.scss'])
+	return gulp.src(['scss/**/*.scss'])
 	.pipe(concat('style.scss'))
 	.pipe(gulp.dest('scss'))
 	.pipe(notify('Concat!'));
@@ -26,14 +26,15 @@ gulp.task('scss', function() {
 	.pipe(notify('Compiled SCSS!'));
 });
 
-gulp.task('rev', function() {
-  gulp.src('./index.html')
-    .pipe(rev())
-    .pipe(gulp.dest('.'));
-});
+// gulp.task('rev', function() {
+//   gulp.src('./index.html')
+//     .pipe(rev())
+//     .pipe(gulp.dest('.'));
+// });
 
 gulp.task('watch', function () {
 	gulp.watch('scss/includes/**/*.scss', ['concat']);
 	gulp.watch('scss/style.scss', ['scss']);
 });
-gulp.task('default', ['concat', 'scss', 'rev', 'watch']);
+gulp.task('default', ['concat', 'scss', 'watch']);
+// gulp.task('default', ['concat', 'scss', 'rev', 'watch']);
