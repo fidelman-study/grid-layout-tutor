@@ -1,21 +1,40 @@
 .grid {
-    /* turn on chrome://flags/ Experimental Web Platform features  */
     display: grid;
+    width: 500px;
+    height: 150px;
 
+    grid-template-columns: 2fr 1fr;
+    /* явные названия линий */
+    grid-template-rows: [header-top] auto [header-bottom main-top] 1fr [main-bottom];
+    /* неявные названия линий */
+    grid-template-areas: "banner banner"
+                         "container menu";
+}
 
-    /*свойство для колонок*/
-    /* станет ровно той ширины, которая нужна,
-    чтобы уместить результат всех значений в свойстве  */
-    /* min-content - минимальное содержание (1 слово) */
-    /* max-content - максимальное содержание (все в 1 строку)*/
-    /* minmax(min, max) - как min-width/height и max-width/height
-    auto - min-width/height, max context в зависимости от положения*/
-    /* если элементов больше, чем в свойстве они перенесутся */
+.grid > :nth-child(1) {
+    background-color: #fcc;
 
+    /* привязка нижних границ к неявным линиям */
+    grid-column-start: banner-start;
+    grid-column-end: banner-end;
 
-    grid-template-columns: [first nav] 150px [main] 1fr [last];
-    /* свойство для строк */
-    grid-template-rows: [first header] 50px [main] 1fr [footer] 50px [last];
+    /* привязка верхних границ к явным линиям */
+    grid-row-start: header-top;
+    grid-row-end: header-bottom;
+}
+
+.grid > :nth-child(2) {
+    background-color: #cfc;
+
+    grid-row-start: main-top;
+    grid-row-end: main-botom;
+}
+
+.grid > :nth-child(3) {
+    background-color: #ccf;
+
+    grid-row-start: main-top;
+    grid-row-end: main-bottom;
 }
 
 
@@ -24,17 +43,3 @@
 /*========================
         Visualization
 ========================*/
-.grid-item1,
-.grid-item5 {
-    background: palevioletred;
-}
-.grid-item2,
-.grid-item6 {
-    background: lightsteelblue;
-}
-.grid-item3{
-    background: greenyellow;
-}
-.grid-item4 {
-    background: purple;
-}
