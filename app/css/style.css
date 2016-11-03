@@ -1,59 +1,17 @@
-form {
+.grid {
     display: grid;
 
-    /*расстояние между линиями (колонками) не фиксированное (auto),
-    поэтому ширина колонок определяется шириной элементов*/
-    grid-template-columns: [labels] auto [controls] auto [oversized] auto;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 50px 15px 50px;
 
-    /* Без dense алгоритм может «переть» только вперед,
-    не оглядываясь назад. Поскольку метки и поля могут
-    находиться только в своих выделенных колонках, то при
-    их размещении алгоритм вынужден опускаться всё ниже и
-    ниже. Когда он доходит до блока #department-block,
-    алгоритм находится на 6 ряду — столько перед ним было
-    меток и полей — и этот блок продолжает этот же 6 ряд. */
 
-    /* вБлагодаря dense алгоритм теперь учитывает пропущенные
-    строки и размещает #department-block сразу же в первой
-    строке его ряда.*/
-    grid-auto-flow: dense;
-}
-form > label {
+    /* grid-column/row-gap. Отступ между колонками/столпцами */
+    /*сокращенная форма столбец строка*/
+    grid-gap: 15px 10px;
 
-    grid-column: labels;
-    grid-row: auto;
-}
-form > input {
-
-    grid-column: controls;
-    grid-row: auto;
-}
-
-#department-block{
-
-    grid-column: oversized;
-
-    /*занимает 3 строки*/
-    grid-row: span 3;
 }
 
 
-#buttons {
-    grid-row: auto;
-
-    /* сокращенная форма, от первого до последнего */
-
-    /*
-    grid-column: 1 / -1;
-    grid-column-start: 1;
-    grid-column-end: -1;
-
-    grid-row: 2/-2;
-
-    grid-area: 1/2/-1/-2;
-    */
-
-    grid-column: 1 / -1;
-
-    text-align: center;
+.grid > div {
+    border: 1px solid;
 }
