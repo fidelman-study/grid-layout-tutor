@@ -18,21 +18,9 @@ body {
     }
 }
 
-@media all and (max-width: 600px) {
-    body {
-        grid-template-columns: 1fr;
-        grid-template-rows: 30px 70px 300px 70px 30px;
-    }
-}
-
-header {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-}
-
+header,
 footer {
     grid-column: 1 / -1;
-    grid-row: -2 / -1;
 }
 
 /*========================
@@ -110,10 +98,3 @@ header article,
 footer article{
     background: #4e5758;
 }
-
-
-
-
-
-
-
