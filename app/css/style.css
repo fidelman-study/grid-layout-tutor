@@ -8,11 +8,10 @@
 
     /* расположение блоков внутри grid контейнера */
 
-    justify-content: space-evenly;
-    align-content: space-around;
+    justify-items: start;
+    align-items: end;
 
-    /*start | end | center | stretch | space-around */
-    /*| space-between | space-evenly*/
+    /*start | end | center | stretch */
 }
 
 
