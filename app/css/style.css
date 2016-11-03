@@ -1,26 +1,75 @@
-.grid {
+body {
     display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 40px 320px 40px;
+    grid-gap: 10px 10px;
+}
+@media all and (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 70px 600px 30px;
+    }
+    main {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+}
 
-    grid-template-columns: repeat(2, 70px);
-    grid-template-rows: repeat(2, 50px);
+@media all and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 70px 300px 70px 30px;
+    }
+}
 
+header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
 
-    /* если значения расположения блока вышли
-    за пределы установленных */
-    grid-auto-columns: 60px;
-    grid-auto-rows: 60px;
+footer {
+    grid-column: 1 / -1;
+    grid-row: -2 / -1;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-row: repeat(3, 25%);
+    grid-gap: 10px 10px;
+}
+
+@media all and (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+    }
+
 
 }
 
-.item-1 {
-    justify-self: end;
-    align-self: center;
+/*========================
+        Visualization
+========================*/
+header,
+footer {
+    background: #4e5758;
 }
-
-.grid > div {
-    border: 1px solid;
+nav,
+aside {
+    background: #1abc9c;
 }
-
+main {
+    background: #3498db;
+    padding: 10px;
+}
 article {
-    background: red;
+    background: #34495e;
 }
+
+
+
+
+
+
+
